@@ -1,0 +1,36 @@
+<header>
+  
+  <div class="container">
+    
+    <nav class="navbar-left">
+      <%= link_to root_path do %>
+        <span class="logo"><i class="fas fa-store"></i>ながのCAKE</span>
+      <% end %>
+    </nav>
+    
+    <!--% if admin_signed_in? %>-->
+    
+      <nav>
+        <ul class = "nav navbar-nav navbar-right">
+          <li><%= link_to  do %>
+            <i class="fas fa-birthday-cake"> 商品一覧</i>
+            <%end%>
+          </li>
+          <li><%= link_to  do %>
+            <i class="fas fa-users"> 会員一覧</i>
+            <%end%>
+          </li>
+          <li><%= link_to  do %>
+            <i class="fas fa-list-alt"> 注文履歴</i>
+            <%end%>
+          </li>
+          <li><%= link_to  do %>
+            <i class="fas fa-sign-out-alt"> ログアウト</i>
+            <%end%>
+          </li>
+         </ul>
+    　</nav>
+    
+    </div>
+
+</header>
