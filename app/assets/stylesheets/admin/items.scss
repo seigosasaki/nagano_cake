@@ -1,0 +1,31 @@
+// Place all the styles related to the admin::items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+dl dt{
+  width: 165px;
+  padding:10px 0;
+  float:left;
+  clear:both;
+}
+
+dl dd{
+  padding:10px 0;
+}
+
+.show-heading, .new-heading, .edit-heading{
+  padding-left:150px;
+  h3{
+    height:40px;
+    width:150px;
+    text-align:center;
+    padding-top:5px;
+    border:3px solid #006060;
+    background-color:#FFFFCC;
+  }
+}
+
+.new-form {
+}
+

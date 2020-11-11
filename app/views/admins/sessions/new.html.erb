@@ -2,7 +2,7 @@
   <div class="row">
   <div class="col-xs-12" >
     <div class="page-guide" >
-      <span>会員の方はこちらからログイン</span>
+      <span>管理者ログイン</span>
     </div>
     <div class="row">
       <%= form_with model: @customer, url: customer_session_path, local: true do |f| %>
@@ -19,7 +19,6 @@
               </td>
             </tr>
           </table>
-          <%= link_to "パスワードを忘れた方はこちら", new_customer_password_path, class: "pull-right" %>
         </div>
         <div class="col-xs-1"></div>
         <div class="row">
@@ -28,15 +27,6 @@
           </div>
         </div>
       <% end %>
-    </div>
-    <div class="another-link">
-      <div class="page-guide">
-        <span>会員登録がまだお済みでない方</span>
-      </div>
-      <p>
-        <%= link_to "こちら", new_registration_path(resource_name) %>
-        から新規登録してください。
-      </p>
     </div>
   </div>
 </div>
