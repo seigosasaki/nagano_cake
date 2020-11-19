@@ -9,7 +9,25 @@ Rails.application.routes.draw do
     registrations: 'customers/registrations'
   }
 
+  scope module: :customer do
+    resources :items, only: [:index, :show]
 
+    get 'members/unsubscribe' => 'members#unsubscribe'
+    patch 'members/withdraw' => 'members#withdraw'
+
+    resource :members, only: [:show, :edit, :update]
+
+    delete "cart_items/destroy_all" => 'cart_items#destroy_all', as: :cart_items_destroy_all
+    resources :cart_items, only: [:index, :create, :update, :destroy]
+
+    post 'orders/confirm' => 'orders#confirm', as: :orders_confirm
+    get 'orders/complete' => 'orders#complete', as: :orders_complete
+    resources :orders, only: [:index, :new, :create, :show]
+  end
+
+
+
+  get "admin" => "admin/homes#top"
 
   devise_for :admins, skip: :all
   devise_scope :admin do
@@ -19,7 +37,13 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :homes, only: []
     resources :items, except: [:destroy]
+    resources :customers, only: [:index, :show, :edit, :update]
+    resources :orders, only: [:index, :show, :personal]
+    get 'orders/:id/personal' => 'orders#personal', as: :orders_personal
+
+
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

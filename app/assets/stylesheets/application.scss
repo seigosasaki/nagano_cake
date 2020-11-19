@@ -36,9 +36,13 @@ body {
 }
 
 header{
+	text-align:bottom;
 	height: 70px;
 	width: 100%;
 	position: relative;
+	background-image: url("sample8.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
 	nav{
 
 	}
@@ -54,14 +58,15 @@ header{
     display: inline-block;
     span{
     	font-family: fantasy;
-    	color:#008080;
+    	color:black;
     }
 	}
 	.navbar-right{
 		margin-right:10px;
 		margin-top:13px;
 		a{
-			color:#008080;
+			color:blue;
+			background:rgba(0,0,0,0.0);
 			&:hover{
 				background-color:#ffffaa;
 				color:#006060;
@@ -191,8 +196,8 @@ th{
 footer{
 	height: 70px;
 	width: 100%;
-	color:#008080;
-	background-color:#FFFFEE;
+	color:white;
+	background-color:black;
     font-size: 0.7em;
     position: absolute;
     bottom: 0;

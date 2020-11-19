@@ -26,6 +26,34 @@ dl dd{
   }
 }
 
-.new-form {
+.show-heading, {
+  margin-bottom:70px;
 }
 
+.item-show-menu{
+  padding-left:30px;
+  padding-top:2px;
+  th, td{
+    padding:20px 10px;
+    background-color: white;
+  }
+  th{
+    width:160px;
+    text-align:center;
+  }
+}
+
+
+.item-show-field {
+  padding-bottom:10px;
+}
+
+.item-show-img {
+  .show-img {
+    width:100%;
+  }
+}
+
+.btn-down {
+  margin-top:50px;
+}

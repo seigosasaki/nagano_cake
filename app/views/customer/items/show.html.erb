@@ -1,0 +1,43 @@
+<div class="container main">
+
+  <div class="row">
+
+    <div class="col-md-3 col-md-offset-1">
+      <div class="item-show-img">
+        <%= attachment_image_tag @item, :image, size: "200x200", format: 'jpeg', fallback: "no_image.jpg", class:"show-img" %>
+      </div>
+    </div>
+
+      <div class="col-md-6 ">
+
+        <div class="item-show-menu">
+
+                <h2><%= @item.name %></h2>
+                <h4><%= @item.introduction %></h4>
+                <h3>¥<%= tax_include(@item.price).to_s(:delimited) %> （税込）</h3>
+        </div>
+      </div>
+  </div>
+
+
+       <div class="row">
+
+         <div class="col-md-3 col-md-offset-4">
+
+           <div class="action cart-button">
+
+             <%= form_with model: @cart, url: cart_items_path(@cart), local: true do |f| %>
+
+               <%= f.hidden_field :item_id, value: @item.id %>
+
+               <%= f.number_field :amount, min: 1, max: 99, value: 1,  autofouce: true %>
+
+               <%= f.submit "カートに入れる", class:"btn btn-primary" %>
+
+              <% end %>
+
+           </div>
+         </div>
+
+       </div>
+</div>

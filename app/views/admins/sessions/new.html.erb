@@ -5,7 +5,7 @@
       <span>管理者ログイン</span>
     </div>
     <div class="row">
-      <%= form_with model: @customer, url: customer_session_path, local: true do |f| %>
+      <%= form_with model: @admin, url: admin_session_path, local: true do |f| %>
         <div id="login-form" class="customer-form col-xs-10 col-xs-offset-1">
           <table>
             <tr>
