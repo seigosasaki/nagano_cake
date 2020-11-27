@@ -1,0 +1,53 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-visual{
+    position:relative;
+    height:300px;
+    width: 100%;
+    max-width: 675px;
+    background-image: url("sample6.jpg");
+    background-size: cover;
+    .main-message{
+        height:100px;
+        width: 380px;
+        font-weight: bold;
+        position:absolute;
+        display: inline-box;
+        text-align: left;
+        margin: auto;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+    }
+}
+
+
+.row-about{
+  text-align:center;
+  h1 {
+    font-size:60px;
+    padding-top:20px;
+    padding-bottom:70px;
+    color: white;
+  }
+  p {
+      font-size:25px;
+      color: white;
+      padding-bottom:10px;
+  }
+}
+
+.container-about {
+    height:500px;
+    background-image: url("/images/about.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.main-message {
+    
+}
+

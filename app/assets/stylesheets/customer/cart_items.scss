@@ -1,0 +1,75 @@
+// Place all the styles related to the customer::CartItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.cart-button{
+  text-align: right;
+  form{
+    input{
+      vertical-align: top;
+    }
+    input#cart_item_amount{
+      width:85px;
+      padding: 6px 0 6px 6px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      &:focus{
+        border:2px solid skyblue ;
+        box-shadow: 0 0 5px skyblue;
+        outline: 0;
+      }
+    }
+  }
+}
+
+.cart-index{
+	table{
+		border:1px solid;
+		width:100%;
+		margin:20px auto;
+		td,th{
+			height:70px;
+			padding:10px;
+			border-bottom: 1px solid;
+		}
+		th{
+			border:1px solid;
+		}
+		td:nth-child(3),td:nth-child(4),td:nth-child(5){
+			border:1px solid;
+		}
+		input#cart_item_amount{
+			width:40px;
+			padding:2px;
+		}
+		.btn-danger{
+			display:block;
+			max-width:100px;
+			margin:0 auto;
+		}
+	}
+	h2{
+		margin:30px;
+	}
+}
+
+.cart-bottom{
+	table{
+		width:30%;
+		th,td{
+			height:70px;
+			width:50%;
+			padding:10px;
+		}
+	}
+}
+
+.actions{
+	margin:30px auto;
+}
+.wide-btn{
+	.btn{
+		width:300px;
+	}
+}

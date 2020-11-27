@@ -1,0 +1,56 @@
+// Place all the styles related to the admin::orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.head-box{
+    table{
+    th{
+	    text-align:center;
+	}
+	td{
+	    padding:10px 0;
+	    padding-left:20px;
+	}
+    }
+}
+
+
+.edit_order{
+    .btn{
+     margin-left:50px;
+    }
+}
+
+
+.left-box{
+	margin-top:30px;
+	text-align:center;
+	table{
+	th{
+	    padding:10px 0;
+	    background-color:#DDDDDD;
+	    text-align:center;
+	}
+	th:nth-child(1){
+	    text-align:center;
+	}
+	td{
+	    padding:5px 0;
+	}
+	td:nth-child(1){
+	    text-align:center;
+	}
+	}
+}
+
+.right-box{
+    margin-top:50px;
+	table{
+		th{
+		  padding:10px 40px;
+		}
+		td{
+		font-size:20px;
+		}
+    }
+}

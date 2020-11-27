@@ -1,0 +1,217 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  padding-bottom: 75px;
+}
+
+header{
+	text-align:bottom;
+	height: 70px;
+	width: 100%;
+	position: relative;
+	background-image: url("sample8.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+	nav{
+
+	}
+	color:#008080;
+	background-color:#FFFFEE;
+	.navbar-left{
+		padding:3px;
+		margin-top:5px;
+		margin-left:30px;
+		font-size: 2em;
+		line-height: 2em;
+		text-decoration: none;
+    display: inline-block;
+    span{
+    	font-family: fantasy;
+    	color:black;
+    }
+	}
+	.navbar-right{
+		margin-right:10px;
+		margin-top:13px;
+		a{
+			color:blue;
+			background:rgba(0,0,0,0.0);
+			&:hover{
+				background-color:#ffffaa;
+				color:#006060;
+			}
+		}
+	}
+	.search-form {
+		position:absolute;
+		top:60px;
+		right:35px;
+		width:235px;
+		.input-group{
+		float:left;
+		}
+	}
+	.welcom-name{
+		padding-top:15px;
+		margin-top:9px;
+    display: inline-block;
+	}
+}
+.body {
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+.flash{
+  border: 1px solid rgba(27,31,35,.15);
+  width: 100%;
+  padding: 16px;
+  font-weight:bold;
+	&.notice{
+		background-color:#dbffed;
+		color:#03622f;
+	}
+	&.success{
+		background-color:#dbedff;
+		color:#032f62;
+	}
+	&.danger{
+		background-color:#ffdbed;
+		color:#dd6262;
+	}
+}
+.main{
+	margin-top:40px;
+}
+
+.page-title{
+	margin-bottom:20px;
+	span{
+    padding:2px 20px;
+		font-size:1.8em;
+    line-height:100%;
+    display: inline-block;
+    background:#eee;
+  	position:relative;
+  	left:30px;
+	}
+}
+
+.info-title{
+	font-size:1.3em;
+	font-weight:bold;
+}
+
+.link-box{
+	width:100%;
+	max-width:500px;
+	display:flex;
+	align-items: center;
+	span{
+		width:150px;
+		padding:15px;
+	}
+	.btn{
+		display:block;
+		padding:7px 30px;
+		margin-right:20px;
+		line-height:20px;
+	}
+}
+
+.actions{
+	margin:30px auto;
+}
+.wide-btn{
+	.btn{
+		width:300px;
+	}
+}
+
+label{
+	font-weight:normal;
+}
+
+td,th{
+	padding: 7px 10px;
+  vertical-align: middle !important; /*もし他のページのレイアウトに支障あればお伝えください！*/
+  border-color: #222 !important;
+}
+
+th{
+	background-color:#eee;
+}
+
+#error_explanation {
+  ul{
+  	padding-top:10px;
+  	li{
+  		margin-bottom:3px;
+  		&:last-child{
+  			margin-bottom:0;
+  		}
+  	}
+  }
+}
+
+.no-border tr{
+    border: none;
+    td{
+        border:none !important;
+    }
+}
+
+footer{
+	height: 70px;
+	width: 100%;
+	color:white;
+	background-color:black;
+    font-size: 0.7em;
+    position: absolute;
+    bottom: 0;
+    .texts{
+        height: 70px;
+        padding: 5px 0;
+        text-align: center;
+        .links{
+            list-style: none;
+            padding-inline-start: 0;
+            li{
+                display: inline-block;
+            }
+        }
+    }
+}
+

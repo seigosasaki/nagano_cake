@@ -1,0 +1,68 @@
+// Place all the styles related to the admin::customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.customer-index {
+    padding-top: 1%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.admin-heading, {
+  padding-left:150px;
+  h3{
+    height:40px;
+    width:150px;
+    text-align:center;
+    padding-top:5px;
+    border:3px solid #006060;
+    background-color:#FFFFCC;
+  }
+}
+
+.show-customer-hedding {
+  h3 {
+    span {
+    height:40px;
+    text-align:center;
+    padding-top:5px;
+    border:3px solid #006060;
+    background-color:#FFFFCC;
+    margin-bottom:40px;
+    color:green;
+    }
+  }
+}
+
+.show-customer-hedding, .edit-customer-hedding {
+  margin-bottom:40px;
+  h3 {
+    span {
+    height:40px;
+    text-align:center;
+    padding-top:5px;
+    border:3px solid #006060;
+    background-color:#FFFFCC;
+    margin-bottom:40px;
+    }
+  }
+}
+
+
+.table-customer {
+  th, td {
+    background-color:white;
+    padding-right:70px;
+    padding-bottom:18px;
+  }
+}
+
+.btn-primary-g {
+    color: #fff;
+    background-color: green;
+    border-color: #2e6da4;
+}
+
+.effect {
+  color:green;
+}

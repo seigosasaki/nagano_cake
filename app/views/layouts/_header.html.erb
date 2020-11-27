@@ -1,0 +1,82 @@
+<header>
+
+  <nav class="navbar">
+
+
+      <%= link_to root_path, class:"navbar-left" do %>
+        <span class="logo"><i class="fas fa-store"></i>ながのCAKE</span>
+      <% end %>
+
+
+    <% if admin_signed_in? %>
+     <style>
+      header{height:110px;}
+    </style>
+<!-- 管理者様ヘッダー -->
+        <ul class = "nav navbar-nav navbar-right">
+
+          <li><%= link_to admin_items_path  do %>
+            <i class="fas fa-birthday-cake"> 商品一覧</i>
+            <%end%>
+          </li>
+          <li><%= link_to admin_customers_path  do %>
+            <i class="fas fa-users"> 会員一覧</i>
+            <%end%>
+          </li>
+          <li><%= link_to admin_orders_path  do %>
+            <i class="fas fa-list-alt"> 注文履歴一覧</i>
+            <%end%>
+          </li>
+          <li><%= link_to destroy_admin_session_path, method: :delete  do %>
+            <i class="fas fa-sign-out-alt"> ログアウト</i>
+            <%end%>
+          </li>
+         </ul>
+
+         <!-- 会員用ヘッダー -->
+         <% elsif customer_signed_in? %>
+         <ul class = "nav navbar-nav navbar-right">
+          <li><%= link_to members_path  do %>
+            <i class="fas fa-user-shield"> マイページ</i>
+            <%end%>
+          </li>
+          <li><%= link_to items_path  do %>
+            <i class="fas fa-birthday-cake"> 商品一覧</i>
+            <%end%>
+          </li>
+          <li><%= link_to cart_items_path  do %>
+            <i class="fas fa-shopping-cart"> カート</i>
+            <%end%>
+          </li>
+          <li><%= link_to destroy_customer_session_path, method: :delete  do %>
+            <i class="fas fa-sign-out-alt"> ログアウト</i>
+            <%end%>
+          </li>
+         </ul>
+
+         <!-- 未登録顧客用ヘッダー -->
+         <% else %>
+         <ul class = "nav navbar-nav navbar-right">
+          <li><%= link_to about_path  do %>
+            <i class="fas fa-birthday-cake"> About</i>
+            <%end%>
+          </li>
+          <li><%= link_to items_path  do %>
+            <i class="fas fa-users"> 商品一覧</i>
+            <%end%>
+          </li>
+          <li><%= link_to new_customer_registration_path do %>
+            <i class="fas fa-plus-circle"> 新規登録</i>
+            <%end%>
+          </li>
+          <li><%= link_to new_customer_session_path do %>
+            <i class="fas fa-sign-out-alt"> ログイン</i>
+            <%end%>
+          </li>
+         </ul>
+
+    　<%end%>
+
+    </nav>
+
+</header>

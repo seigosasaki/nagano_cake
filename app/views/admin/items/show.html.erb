@@ -1,0 +1,68 @@
+<div class="container main">
+
+  <div class="row">
+
+    <div class="show-heading">
+      <h3>商品詳細</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    
+    <div class="col-md-3 col-md-offset-1">
+      <div class="item-show-img">
+        <%= attachment_image_tag @item, :image, size: "200x200", format: 'jpeg', fallback: "no_image.jpg", class:"show-img" %>
+      </div>
+    </div>
+
+      <div class="col-md-6">
+
+        <div class="item-show-menu">
+
+          <table>
+
+              <tr>
+                <th>商品名</th>
+                <td><%= @item.name %></td>
+              </tr>
+
+              <tr>
+                <th>商品説明</th>
+                <td><%= @item.introduction %></td>
+              </tr>
+
+              <tr>
+                <th>税込価格<br>（税抜価格）</th>
+                <td><%= tax_include(@item.price).to_s(:delimited) %> (<%= @item.price.to_s(:delimited) %>)円</td>
+              </tr>
+
+          </table>
+        </div>
+       </div>
+  </div>
+      
+
+       </div class="row">
+       <div class="col-md-3 col-md-offset-5">
+         <div class="btn-down">
+           <%=link_to "編集する", edit_admin_item_path(@item), class: "btn  btn-primary", style:"width:150px;height:40px;font-size:17px;font-weight:bold;text-align:center;" %>
+
+         </div>
+         </div>
+
+       </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+</div>
