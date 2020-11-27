@@ -7,7 +7,7 @@
     height:300px;
     width: 100%;
     max-width: 675px;
-    background-image: url("sample6.jpg");
+    background-image: image-url("sample6.jpg");
     background-size: cover;
     .main-message{
         height:100px;
@@ -42,7 +42,7 @@
 
 .container-about {
     height:500px;
-    background-image: url("/images/about.jpg");
+    background-image: image-url("/images/about.jpg");
     background-size:cover;
     background-position:center;
 }
